@@ -6,7 +6,7 @@ from pathlib import Path
 
 # ディレクトリ設定
 PROJECT_ROOT = Path(__file__).parent
-OUTPUT_DIR = PROJECT_ROOT / "output"
+OUTPUT_DIR = PROJECT_ROOT / "../output"
 LOG_DIR = OUTPUT_DIR
 
 # ログ設定
