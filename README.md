@@ -14,7 +14,7 @@ WebClass（大学のLMS）から課題・お知らせ情報を自動取得し、
 ## ディレクトリ構成
 
 ```
-webclass_client/
+assignments/
 ├── src/
 │   ├── main.py                # メインスクリプト
 │   ├── config.py              # 設定管理
@@ -90,4 +90,4 @@ python main.py
 
 ## ライセンス
 
-MIT License（予定） 
+MIT License
