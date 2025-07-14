@@ -54,8 +54,8 @@ def load_env_credentials():
     import dotenv
     
     dotenv.load_dotenv()
-    username = dotenv.get_key(".env", "USERNAME")
-    password = dotenv.get_key(".env", "PASSWORD")
+    username = dotenv.get_key("../.env", "USERNAME")
+    password = dotenv.get_key("../.env", "PASSWORD")
     
     if not username or not password:
         raise ValueError("環境変数 USERNAME または PASSWORD が設定されていません")
