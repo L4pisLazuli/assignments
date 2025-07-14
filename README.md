@@ -63,7 +63,11 @@ python main.py
 ```
 
 または、ルートのバッチファイルからも起動可能です：
-
+get_webclass_info.bat内の以下の部分を編集してください
+```bash
+cd PATH_TO_THIS_DIRECTORY
+```
+以下のコマンドで実行します
 ```bash
 ./get_webclass_info.bat
 ```
