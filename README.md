@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 2. **.envファイルの作成**
 
-プロジェクトルートに `.env` ファイルを作成し、以下の内容を記載してください：
+srcフォルダ内に `.env` ファイルを作成し、以下の内容を記載してください：
 
 ```
 USERNAME=あなたのWebClassユーザー名
