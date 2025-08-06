@@ -52,10 +52,20 @@ def check_execution_limit(logger):
 def load_env_credentials():
     """環境変数から認証情報を読み込む"""
     import dotenv
+    from pathlib import Path
     
-    dotenv.load_dotenv()
-    username = dotenv.get_key("../.env", "USERNAME")
-    password = dotenv.get_key("../.env", "PASSWORD")
+    # プロジェクトルートの.envファイルのパスを取得
+    project_root = Path(__file__).parent.parent
+    env_file = project_root / ".env"
+    
+    # .envファイルが存在するかチェック
+    if not env_file.exists():
+        raise FileNotFoundError(f".envファイルが見つかりません: {env_file}")
+    
+    # .envファイルを読み込み
+    dotenv.load_dotenv(env_file)
+    username = dotenv.get_key(str(env_file), "USERNAME")
+    password = dotenv.get_key(str(env_file), "PASSWORD")
     
     if not username or not password:
         raise ValueError("環境変数 USERNAME または PASSWORD が設定されていません")
